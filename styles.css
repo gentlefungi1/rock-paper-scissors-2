@@ -1,24 +1,26 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.main-container{
+.main-container {
     background-color: rgba(160, 160, 160, 0.377);
     border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 700px;
-    /* width: 1200px; */
 }
 
-.inner-container{
+.inner-container {
     border: 2px solid black;
-    width: 1000px;
+    width: 100%;
+    max-width: 1200px;
     height: 700px;
 }
 
-.first-container{
+.first-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,19 +28,18 @@ body{
     text-align: center;
 }
 
-.first-container-score{
+.first-container-score {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
-.heading{
+.heading {
     color: rgb(2, 2, 85);
 }
 
-.second-container{
+.second-container {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -48,19 +49,19 @@ body{
     margin-bottom: 40px;
 }
 
-img{
+img {
     width: 130px;
     border-radius: 5px;
 }
 
-.second-container-images{
+.second-container-images {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.third-container{
+.third-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -69,8 +70,8 @@ img{
     text-align: center;
 }
 
-.third-container-button-div{
-    margin-top: 20pz;
+.third-container-button-div {
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -78,7 +79,6 @@ img{
     margin-bottom: 20px;
 }
 
-/* CSS */
 .button27 {
     width: 150px;
     appearance: none;
@@ -89,7 +89,7 @@ img{
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 16px;
     line-height: normal;
     margin: 0;
@@ -110,25 +110,112 @@ img{
 }
 
 .button27:disabled {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .button27:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
 }
 
 .button27:active {
-  box-shadow: none;
-  transform: translateY(0);
+    box-shadow: none;
+    transform: translateY(0);
 }
 
-.footer-div{
+.footer-div {
     text-align: center;
     margin-top: 50px;
 }
 
-
-.reset-button{
+.reset-button {
     padding: 10px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+    .inner-container {
+        height: auto;
+    }
+
+    .first-container-score {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second-container-images {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .third-container-button-div {
+        flex-direction: column;
+    }
+
+    .button27 {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        height: auto;
+        padding: 20px;
+    }
+
+    .inner-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .first-container,
+    .second-container,
+    .third-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .first-container-score,
+    .third-container-button-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button27 {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px 0;
+    }
+
+    img {
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inner-container {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .button27 {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    img {
+        width: 80px;
+    }
+
+    .footer-div {
+        margin-top: 30px;
+    }
 }
